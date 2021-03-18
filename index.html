@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Mad Libs</title>
+ </head>
+ <body>
+ 
+    <h1>Mad Libs - By Mason Pinkerton</h1>
+     
+    <ul>
+      <li>Noun: <input type="text" id="noun"></li>
+      <li>Adjective: <input type="text" id="adjective"></li>
+      <li>Someone's Name: <input type="text" id="person"></li>
+      <li>Verb Ending With ing: <input type="text" id="verb"></li>
+      <li>Phrase: <input type="text" id="phrase"></li>
+      <li>Someone Else's Name: <input type="text" id="personone"></li>
+    </ul>
+     
+    <button id="lib-button">Lib It!</button>
+      
+    <p>Generated Story: 
+    <span id="story"></span>
+    </p>
+ 
+    <script>
+        var libButton = document.getElementById('lib-button');
+        var libIt = function() {
+            var storyDiv = document.getElementById("story");
+            var noun = document.getElementById("noun").value;
+            var adjective = document.getElementById("adjective").value;
+            var person = document.getElementById("person").value;
+            var verb = document.getElementById("verb").value;
+            var phrase = document.getElementById("phrase").value;
+            var personone = document.getElementById("personone").value;
+            var randomstory = Math.ceil(Math.random() * 4);
+            if (randomstory === 1) {
+            storyDiv.innerHTML = "The " + adjective + " " + person + "  went to the " + noun + " then came home " + verb + " and said '" + phrase + "'.";
+            }
+            if (randomstory === 2) {
+            storyDiv.innerHTML = "The " + adjective + " " + person + "  decided to cry on/at his/her " + noun + " while " + verb + ". He/she then came in the kitchen and started screaming '" + phrase + "' at " + personone + "'s wife/husband.";
+            }
+            if (randomstory === 3) {
+            storyDiv.innerHTML = personone + "'s " + adjective + " " + noun + " decided to go " + verb + ", then, went to see " + person + ". He/she told " + person + "  '" + phrase + "'.";
+            }
+        };
+        libButton.addEventListener('click', libIt);
+        
+    </script>
+  
+ </body>
+</html>
