@@ -33,7 +33,7 @@
             var verb = document.getElementById("verb").value;
             var phrase = document.getElementById("phrase").value;
             var personone = document.getElementById("personone").value;
-            var randomstory = Math.ceil(Math.random() * 5);
+            var randomstory = Math.ceil(Math.random() * 6);
             if (randomstory === 1) {
             storyDiv.innerHTML = "The " + adjective + " " + person + "  went to the " + noun + " then came home " + verb + " with " + personone + " and said '" + phrase + "'.";
             }
@@ -45,6 +45,9 @@
             }
             if (randomstory === 4) {
             storyDiv.innerHTML = "'" + phrase + "'! " + personone + " screamed. " + person + " came in and asked what's wrong. " + personone + " responded by " + verb + ". " + person + " left to go to the local " + adjective  + " " + noun + ".";
+            }
+            if (randomstory === 5) {
+            storyDiv.innerHTML = "One day, " + person + " was " + verb + ". He then transformed himself into a " + noun + ". He then laughed as he started to take over the " + adjective + " world. Suddenly, " + person + " came and blew up " + personone + ". He won an award, and at the ceremony said: '" + phrase + "'."
             }
         };
         libButton.addEventListener('click', libIt);
